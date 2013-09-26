@@ -1,5 +1,5 @@
-//  Click-And-Go LEGO LOCO Alternate Installer
-//  Copyright (c) 2012 le717
+//  Click-And-Go LEGO Racers 2 Alternate Installer V1.1
+//  Copyright (c) 2012-2013 le717
 //  http://triangle717.wordpress.com
 //  Contains source code from Grim Fandango Setup
 //  Copyright (c) 2007-2008 Bgbennyboy
@@ -20,7 +20,7 @@ var
 	external 'GetLogicalDriveStringsA@kernel32.dll stdcall';
 
 const
-	UniqueFile = 'install\game data\music\bonus.1';
+	UniqueFile = 'install\LEGO Racers 2.exe';
 
 	DRIVE_UNKNOWN = 0; // The drive type cannot be determined.
 	DRIVE_NO_ROOT_DIR = 1; // The root path is invalid. For example, no volume is mounted at the path.
@@ -116,7 +116,7 @@ begin
 
 	if FindUniqueFile() <> '' then
 	begin
-		MsgBox('A LEGO Racers 2 disc has been found. Installation will now continue.', mbError, MB_OK);
+		//MsgBox('A LEGO Racers 2 disc has been found. Installation will now continue.', mbError, MB_OK);
 	end
 	else
 	begin
@@ -129,5 +129,5 @@ begin
 		end;
 	end;
 
-	Result:=FindUniqueFile(); //Not a nice way of doing things at all but it'll do for now
+	Result:=FindUniqueFile();
 end;
