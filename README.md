@@ -9,4 +9,4 @@ to pull the files off the disc, modified by Triangle717 to support ANSI and Unic
 
 License
 -------
-***LEGO:registered: Racers 2 Alternate Installer*, created 2013 [Triangle717](http://Triangle717.WordPress.com).**
+***LEGO:registered: Racers 2 Alternate Installer*,copyright :copyright: 2012 [Triangle717](http://Triangle717.WordPress.com).**
