@@ -1,12 +1,9 @@
-//  Click-And-Go LEGO Racers 2 Alternate Installer V1.1
-//  Copyright (c) 2012-2013 le717
-//  http://triangle717.wordpress.com
-//  Contains source code from Grim Fandango Setup
-//  Copyright (c) 2007-2008 Bgbennyboy
-//  Http://quick.mixnmojo.com
-//  And http://www.vincenzo.net/isxkb/index.php?title=Ask_for_a_drive_to_install
-//  Code modified by Bgbennyboy to search for a unique file
-//  and by le717 to support ANSI and Unicode InnoSetup
+// LEGO Racers 2 Alternate Installer
+// Created 2012-2014 Triangle717
+// <http://Triangle717.WordPress.com/>
+// Contains source code from Grim Fandango Setup
+// Copyright (c) 2007-2008 Bgbennyboy
+// <http://quick.mixnmojo.com/>
 
 [Code]
 
