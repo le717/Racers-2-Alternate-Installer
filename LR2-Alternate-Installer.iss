@@ -1,4 +1,4 @@
-; LEGO Racers 2 Alternate Installer
+﻿; LEGO Racers 2 Alternate Installer
 ; Created 2012-2014 Triangle717
 ; <http://Triangle717.WordPress.com/>
 ; Contains source code from Grim Fandango Setup
@@ -7,16 +7,15 @@
 
 ; If any version below the specified version is used for compiling,
 ; this error will be shown.
-#if VER < EncodeVer(5, 5, 2)
-  #error You must use Inno Setup 5.5.2 or newer to compile this script
+#if VER < EncodeVer(5, 5, 9)
+  #error You must use Inno Setup 5.5.9 or newer to compile this script
 #endif
 
-#define MyAppInstallerName "LEGO� Racers 2 Alternate Installer"
-#define MyAppInstallerVersion "1.2"
-#define MyAppName "LEGO� Racers 2"
-#define MyAppNameNoR "LEGO Racers 2"
+#define MyAppInstallerName "LEGO Racers 2 Alternate Installer"
+#define MyAppInstallerVersion "1.2.0"
+#define MyAppName "LEGO Racers 2"
 #define MyAppVersion "1.0.0.0"
-#define MyAppPublisher "LEGO Software"
+#define MyAppPublisher "Attention to Detail"
 #define MyAppExeName "LEGO Racers 2.exe"
 
 [Setup]
@@ -25,40 +24,44 @@ AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 VersionInfoVersion={#MyAppInstallerVersion}
 AppPublisher={#MyAppPublisher}
-AppCopyright=� 2001 {#MyAppPublisher}
+AppCopyright=(c) 2001 {#MyAppPublisher}
 LicenseFile=license.txt
+
 DefaultDirName={pf}\LEGO Media\{#MyAppName}
-DefaultGroupName={#MyAppName}
+DefaultGroupName=LEGO Media\{#MyAppName}
 AllowNoIcons=true
+
 SetupIconFile=ICON\1.ico
 WizardImageFile=LR2 Sidebar Image.bmp
 WizardSmallImageFile=InnoSetup LEGO Logo.bmp
 WizardImageStretch=True
-WizardImageBackColor=clBlack
+
 OutputDir=bin
-OutputBaseFilename={#MyAppInstallerName} {#MyAppInstallerVersion}
+OutputBaseFilename=LEGO-Racers-2-Alternate-Installer-{#MyAppInstallerVersion}
+
 UninstallFilesDir={app}
-UninstallDisplayIcon={#MyAppExeName}
-CreateUninstallRegKey=true
 UninstallDisplayName={#MyAppName}
-SolidCompression=True
-Compression=lzma/ultra64
+UninstallDisplayIcon={app}\ICON\1.ico
+CreateUninstallRegKey=true
+
+Compression=lzma2/ultra64
+SolidCompression=yes
 InternalCompressLevel=ultra
-AllowRootDirectory=false
+LZMAUseSeparateProcess=yes
+
 PrivilegesRequired=admin
 ShowLanguageDialog=no
+RestartIfNeededByRun=no
 
 [Languages]
 Name: "English"; MessagesFile: "compiler:Default.isl"
 
 [Messages]
 BeveledLabel={#MyAppInstallerName}
-; WelcomeLabel2 is overridden because I'm unsure if every LEGO Racers 2 disc
-; says version 1.0.0.0 or just mine.
-; WelcomeLabel2 is overridden because I'm unsure if every LEGO Racers 2 disc says version 1.0.0.0 or just mine.
-English.WelcomeLabel2=This will install [name] on your computer.%n%nIt is recommended that you close all other applications before continuing.
-; DiskSpaceMBLabel is overridden because it reports an incorrect installation size.
-DiskSpaceMBLabel=At least NUMBER HERE MB of free disk space is required.
+ 
+; DiskSpaceMBLabel is overridden in order to report 
+; a correct installation size
+DiskSpaceMBLabel=At least 450 MB of free disk space is required.
 
 ; Both Types and Components sections are required to create the installation options.
 [Types]

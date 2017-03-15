@@ -1,4 +1,4 @@
-// LEGO Racers 2 Alternate Installer
+﻿// LEGO Racers 2 Alternate Installer
 // Created 2012-2014 Triangle717
 // <http://Triangle717.WordPress.com/>
 // Contains source code from Grim Fandango Setup
@@ -106,7 +106,11 @@ begin
 	FindAllCdDrives();
 	if GetArrayLength(DrvLetters) < 1 then
 	begin
-		MsgBox('I''m sorry, but I could not find any disc drives attached to your computer. Are you sure you are even have an optical drive?', mbError, MB_OK);
+		MsgBox(
+           'A disc drive was not found on your computer.',
+           mbError,
+           MB_OK
+          );
 		Abort;
 	end;
 
@@ -119,7 +123,7 @@ begin
 	begin
 		while FindUniqueFile() = '' do
 		begin
-			if MsgBox('Well, this is embarrassing. I seem to have misplaced your LEGO Racers 2 disc. Perhaps you can refresh my memory. Please remind me where your disc is and press OK, or press Cancel to exit the Setup.', mbConfirmation, MB_OKCANCEL or MB_DEFBUTTON1) = IDOK then
+			if MsgBox('Please insert a LEGO Racers 2 disc or press Cancel to exit the Setup.', mbConfirmation, MB_OKCANCEL or MB_DEFBUTTON1) = IDOK then
 
 			else
 				Abort;
