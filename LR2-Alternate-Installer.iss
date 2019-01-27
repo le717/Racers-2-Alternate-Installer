@@ -76,7 +76,15 @@ Name: "Full"; Description: "Full Installation (With Movies/Music)"; Types: Full
 Source: "{code:GetSourceDrive}install\LEGO Racers 2.exe"; DestDir: "{app}"; Flags: external ignoreversion; Components: Full Minimal
 Source: "{code:GetSourceDrive}install\COMPRESS.INF"; DestDir: "{app}"; Flags: external ignoreversion; Components: Full Minimal
 Source: "{code:GetSourceDrive}install\FILELIST.INF"; DestDir: "{app}"; Flags: external ignoreversion; Components: Full Minimal
-Source: "{code:GetSourceDrive}ReadMe.txt"; DestDir: "{app}"; Flags: external ignoreversion; Components: Full Minimal
+Source: "{code:GetSourceDrive}ReadMe.txt"; DestDir: "{app}"; Flags: external ignoreversion skipifsourcedoesntexist; Components: Full Minimal
+Source: "{code:GetSourceDrive}LeesMij.txt"; DestDir: "{app}"; Flags: external ignoreversion skipifsourcedoesntexist; Components: Full Minimal
+Source: "{code:GetSourceDrive}Leggimi.txt"; DestDir: "{app}"; Flags: external ignoreversion skipifsourcedoesntexist; Components: Full Minimal
+Source: "{code:GetSourceDrive}Liesmich-Datei.txt"; DestDir: "{app}"; Flags: external ignoreversion skipifsourcedoesntexist; Components: Full Minimal
+Source: "{code:GetSourceDrive}Lisezmoi.txt"; DestDir: "{app}"; Flags: external ignoreversion skipifsourcedoesntexist; Components: Full Minimal
+Source: "{code:GetSourceDrive}Archivo Léeme.txt"; DestDir: "{app}"; Flags: external ignoreversion skipifsourcedoesntexist; Components: Full Minimal
+Source: "{code:GetSourceDrive}Readme_da.txt"; DestDir: "{app}"; Flags: external ignoreversion skipifsourcedoesntexist; Components: Full Minimal
+Source: "{code:GetSourceDrive}Readme_uk.txt"; DestDir: "{app}"; Flags: external ignoreversion skipifsourcedoesntexist; Components: Full Minimal
+Source: "{code:GetSourceDrive}Viktigt.txt"; DestDir: "{app}"; Flags: external ignoreversion skipifsourcedoesntexist; Components: Full Minimal
 Source: "{code:GetSourceDrive}Manual\Racers 2 USA PC manual.pdf"; DestDir: "{app}"; Flags: external ignoreversion skipifsourcedoesntexist; Components: Full Minimal
 Source: "ICON\*"; DestDir: "{app}\ICON"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: Full Minimal
 Source: "{code:GetSourceDrive}install\game data\Music\*"; DestDir: "{app}\game data\Music"; Flags: external ignoreversion createallsubdirs recursesubdirs; Components: Full
